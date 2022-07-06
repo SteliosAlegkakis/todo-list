@@ -3,6 +3,8 @@ window.addEventListener('load',()=>{
     const input = document.querySelector("#new-task-input");
     const list_el = document.querySelector("#tasks");
 
+    input.focus();
+
     form.addEventListener('submit',(e)=>{
         e.preventDefault();
         const task = input.value;
@@ -33,11 +35,11 @@ window.addEventListener('load',()=>{
 
         const task_edit_el = document.createElement("button");
         task_edit_el.classList.add("edit");
-        task_edit_el.innerHTML = "Edit";
+        task_edit_el.innerHTML = "edit";
 
         const task_delete_el = document.createElement("button");
         task_delete_el.classList.add("delete");
-        task_delete_el.innerHTML = "Delete";
+        task_delete_el.innerHTML = "delete";
 
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
